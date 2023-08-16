@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "realfoodlove-bd2be"
+  },
+  "targets": {
+    "realfoodlove-bd2be": {
+      "hosting": {
+        "fortune-cookie-rfl": [
+          "fortune-cookie-rfl"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
