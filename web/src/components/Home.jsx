@@ -45,12 +45,12 @@ const Home = () => {
   } = useContext(Context);
 
   return (
-    <div className="relative z-20 mt-20">
+    <div className="relative z-20 mt-10">
       <h1 className="text-white text-5xl lg:text-6xl xl:text-8xl font-fortune-cookie text-center">
         Fortune Cookie
       </h1>
 
-      <div className="w-full flex justify-center items-center mt-20 pb-20">
+      <div className="w-full flex justify-center items-center mt-10 pb-20">
         <div className="text-white text-lg font-montserrat w-[90%] lg:w-1/3 flex justify-center flex-col">
           <p ref={errorRef} className="text-red-600 text-2xl font-montserrat">
             {errorText}
@@ -127,7 +127,7 @@ const Home = () => {
 
           <div className="mt-10">
             <button
-              className="p-5 w-full bg-purple-500 text-white font-fortune-cookie text-2xl rounded-sm disabled:bg-slate-500 disabled:cursor-not-allowed"
+              className="p-5 w-full bg-[#724cf9] text-white font-fortune-cookie text-2xl rounded-sm disabled:bg-slate-500 disabled:cursor-not-allowed"
               onClick={async () => {
                 const response = await handleSubmit();
                 if (response) {

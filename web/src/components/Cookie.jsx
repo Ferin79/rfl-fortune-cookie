@@ -2,6 +2,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { useContext, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Context } from "./Data";
+import PaperImg from "../assets/paper.jpg";
 
 const Cookie = () => {
   const location = useLocation();
@@ -22,7 +23,7 @@ const Cookie = () => {
   }, [location, navigate, email]);
 
   return (
-    <div className="relative z-20 mt-20">
+    <div className="relative z-20 mt-10">
       <h1 className="text-white text-5xl lg:text-6xl xl:text-8xl font-fortune-cookie text-center">
         Fortune Cookie
       </h1>
@@ -39,25 +40,33 @@ const Cookie = () => {
           }
         }}
       />
-      <div className="flex justify-center items-center pb-20">
-        <div className="w-[80%] lg:w-1/2 h-30 bg-white p-5">
-          <p className={`text-black ${startAnimation && "animate-text"}`}>
+      <div className="flex justify-center items-center pb-5">
+        <div className="w-[80%] lg:w-1/2 h-auto bg-white p-5 relative">
+          <p
+            className={`text-black text-xl relative z-20 ${
+              startAnimation && "animate-text"
+            }`}
+          >
             {message}
           </p>
+          <img
+            src={PaperImg}
+            className="h-full w-full absolute top-0 left-0 object-cover z-10"
+          />
         </div>
       </div>
 
-      <div className="py-10 flex justify-center items-center">
+      <div className="py-10 flex flex-col md:flex-row justify-center items-center mx-5 md:mx-0">
         <button
           disabled={isSubmitLoading}
-          className="w-fit p-5 bg-purple-500 font-fortune-cookie text-2xl rounded-sm mr-5 text-white disabled:bg-slate-500 disabled:cursor-not-allowed"
+          className="w-full md:w-fit p-5 bg-purple-500 font-fortune-cookie text-2xl rounded-sm mr-0 md:mr-5 mb-5 md:mb-0 text-white disabled:bg-slate-500 disabled:cursor-not-allowed"
           onClick={() => navigate("/")}
         >
           Start over
         </button>
         <button
           disabled={isSubmitLoading}
-          className="w-fit p-5 bg-blue-700 font-fortune-cookie text-2xl rounded-sm text-white disabled:bg-slate-500 disabled:cursor-not-allowed"
+          className="w-full md:w-fit p-5 bg-[#724cf9] font-fortune-cookie text-2xl rounded-sm text-white disabled:bg-slate-500 disabled:cursor-not-allowed"
           onClick={async () => {
             const response = await handleSubmit();
             if (response) {
