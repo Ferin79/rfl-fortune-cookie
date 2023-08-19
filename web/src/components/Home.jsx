@@ -108,7 +108,7 @@ const Home = () => {
           <div className="mt-10">
             <input
               type="text"
-              placeholder="Your Name"
+              placeholder="Your First Name"
               className="w-full px-5 py-3 rounded-sm text-black"
               value={name}
               onChange={(e) => setName(e.target.value)}
