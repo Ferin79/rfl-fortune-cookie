@@ -47,7 +47,10 @@ const Home = () => {
   return (
     <div className='relative z-20 mt-10'>
       <h1 className='text-white text-2xl lg:text-4xl xl:text-6xl font-sedgwick text-center'>
-        Your Daily Dose of Personalized Wellness Motivation
+        Your Daily Dose
+      </h1>
+      <h1 className='text-white text-2xl lg:text-4xl xl:text-6xl font-sedgwick text-center mt-5'>
+        of Personalized Wellness Motivation
       </h1>
 
       <div className=' flex justify-center items-center'>
@@ -140,7 +143,7 @@ const Home = () => {
               onClick={async () => {
                 const response = await handleSubmit();
                 if (response) {
-                  navigate('/cookie', {
+                  navigate('/motivation', {
                     state: {
                       message: response,
                     },
@@ -149,7 +152,7 @@ const Home = () => {
               }}
               disabled={isSubmitLoading}
             >
-              {isSubmitLoading ? 'Loading...' : 'Crack your cookie'}
+              {isSubmitLoading ? 'Loading...' : 'Get your motivation'}
             </button>
           </div>
         </div>

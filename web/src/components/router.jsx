@@ -1,14 +1,14 @@
-import { createBrowserRouter } from "react-router-dom";
-import Home from "./Home";
-import Cookie from "./Cookie";
+import { createBrowserRouter } from 'react-router-dom';
+import Home from './Home';
+import Cookie from './Cookie';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Home />,
   },
   {
-    path: "/cookie",
+    path: '/motivation',
     element: <Cookie />,
   },
 ]);

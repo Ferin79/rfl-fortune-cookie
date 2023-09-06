@@ -27,7 +27,10 @@ const Cookie = () => {
     <AnimatePresence>
       <div className='relative z-20 mt-10'>
         <h1 className='text-white text-2xl lg:text-4xl xl:text-6xl font-sedgwick text-center'>
-          Your Daily Dose of Personalized Wellness Motivation
+          Your Daily Dose
+        </h1>
+        <h1 className='text-white text-2xl lg:text-4xl xl:text-6xl font-sedgwick text-center mt-5'>
+          of Personalized Wellness Motivation
         </h1>
         {startAnimation && (
           <motion.div
